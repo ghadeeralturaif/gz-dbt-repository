@@ -7,15 +7,18 @@ sources:
       - name: sales 
         identifier: raw_gz_sales 
         description: sales of greenweez
-        tests:
-          - unique:
-             columns name: "(orders_id || '-' || products_id)"
-
+        columns:
+          - name: orders_id
+          - name: products_id
+            description: primary key of table
+            tests:
+              - unique
+              - not_null
       - name : product
         identifier: raw_gz_product 
         description: product info of greenweez
         columns:
-          - name: product_id
+          - name: products_id
             description: primary key of table
             tests:
               - unique
