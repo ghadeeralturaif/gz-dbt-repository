@@ -8,8 +8,8 @@ sources:
         identifier: raw_gz_sales 
         description: sales of greenweez
         columns:
-          - name: orders_id
           - name : products_id
+          - name: orders_id
             description: primary key of table
             tests:
               - unique
