@@ -8,8 +8,7 @@ sources:
         identifier: raw_gz_sales 
         description: sales of greenweez
         columns:
-          - name: products_id
-          - name: orders_id
+          - name: orders_id_pdt_id_
             tests:
               - unique
               - not_null
