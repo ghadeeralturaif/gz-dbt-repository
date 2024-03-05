@@ -16,7 +16,7 @@ renamed as (
         ship_cost
 
     from source
-    --where shipping_fee != shipping_fee_1
+    --where shipping_fee != shipping_fee_1 to check are same values
 
 )
 
