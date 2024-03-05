@@ -7,12 +7,9 @@ sources:
       - name: sales 
         identifier: raw_gz_sales 
         description: sales of greenweez
-        columns:
-          - name: products_id
-          - name: orders_id
-            tests:
-              - unique
-              - not_null
+        tests:
+           - unique:
+                column_name: "(orders_id ||  '-' || pdt_id)      
       - name : product
         identifier: raw_gz_product 
         description: product info of greenweez
