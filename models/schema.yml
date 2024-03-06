@@ -28,6 +28,18 @@ sources:
             tests:
               - unique
               - not_null
+      - name: adwords
+        identifier: raw_gz_adwords
+        description: information about adwords platform
+      - name: bing
+        identifier: raw_gz_bing
+        description: information about bing platform
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: information about criteo platform
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: information about facebook platform
 
 
 
