@@ -9,4 +9,3 @@ FROM {{ ref('stg_gz_raw_data__criteo') }}
 UNION ALL 
 SELECT *
 FROM {{ ref('stg_gz_raw_data__facebook') }}
-
