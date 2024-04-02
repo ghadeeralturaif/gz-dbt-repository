@@ -48,7 +48,7 @@ sources:
           - not_null:
              column_name:
               - paid_source
-              - campaign_name
+              - campgn_name
 
 
 
