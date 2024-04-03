@@ -40,6 +40,9 @@ sources:
       - name: facebook
         identifier: raw_gz_facebook
         description: information about facebook platform
+models:
+      - name: int_campaigns
+
     
 
 
