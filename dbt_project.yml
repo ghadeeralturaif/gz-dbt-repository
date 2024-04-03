@@ -42,6 +42,8 @@ models:
       +materialized: table
       finance:
         schema: finance
-
+    models:
+      intermediate:
+      +materialized: view
 
 
