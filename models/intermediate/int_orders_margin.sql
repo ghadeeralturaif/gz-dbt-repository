@@ -1,10 +1,13 @@
-select 
-orders_id,
-date_date,
-round(SUM(revenue),2) as revenue,
-round(SUM(quantity),2) as quantity,
-round((cast(purchase_price as float64) * quantity) * quantity,2) As purchase_Cost,
-round(revenue - (cast(purchase_price as float64) * quantity),2) AS margin
-from {{ ref('int_sales_margin') }}
-GROUP BY orders_id,date_date
-ORDER BY orders_id DESC
+SELECT 
+    orders_id,
+    date_date,
+    ROUND(SUM(revenue), 2) AS revenue,
+    ROUND(SUM(quantity), 2) AS quantity,
+    ROUND((CAST(purchase_price AS FLOAT64) * quantity), 2) AS purchase_Cost,
+    ROUND(revenue - (CAST(purchase_price AS FLOAT64) * quantity), 2) AS margin
+FROM 
+    {{ ref('int_sales_margin') }}
+GROUP BY 
+    orders_id, date_date
+ORDER BY 
+    orders_id DESC;
