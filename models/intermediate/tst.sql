@@ -1,3 +1,3 @@
-{{config(materialized='table')}}
+--{{config(materialized='table')}}
 select *
 from {{ ref('int_sales_margin') }}
