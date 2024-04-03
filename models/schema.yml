@@ -40,8 +40,7 @@ sources:
       - name: facebook
         identifier: raw_gz_facebook
         description: information about facebook platform
-      - name:tst
-      
+
 
 
 
