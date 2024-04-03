@@ -10,4 +10,3 @@ round((cast(purchase_price as float64) * quantity) * quantity,2) As purchase_cos
 from {{ ref('stg_gz_raw_data__sales') }}
 left join {{ ref('stg_gz_raw_data__product') }}
 using(products_id)
-
