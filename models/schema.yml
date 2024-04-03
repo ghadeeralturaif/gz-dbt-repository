@@ -40,21 +40,17 @@ sources:
       - name: facebook
         identifier: raw_gz_facebook
         description: information about facebook platform
-      - name: int_campaigns_day
-        table_type: view
-        models:
-          - name: finance_campaigns_day
-          description: global kpi
-          columns:
-            - name: ads_margin
-              description: operational_margin - ads_cost
-            - name: average_basket
-              description: average basket cost for each day 
-              tests:
-                - not_null:
-              column_name:
-                 - ads_margin
-                 - average_basket
+        - name: int_campaigns
+          description: data from all campaigns
+          tests:
+            - unique:
+          column_name: "(campaign_key || '-' || date_date)"
+          - not_null:
+         column_name:
+          - paid_source
+          - campaign_name
+
+
 
 
 
